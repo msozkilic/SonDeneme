@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.lang3.builder.ToStringExclude;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
@@ -14,6 +15,8 @@ public class GenelWebDriver {
     public void beforeClass(){
 
         WebDriverManager.chromedriver().setup();
+
+        driver=new ChromeDriver();
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
