@@ -33,5 +33,12 @@ public class GenelWebDriver {
     @AfterClass
     public void afterClass(){
 
+        try {
+            Thread.sleep(30);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.quit();
+
     }
 }
