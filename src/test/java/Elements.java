@@ -9,8 +9,23 @@ public class Elements {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(linkText = "Alle Cookies inkl. US Partner akzeptieren")
+    @FindBy(xpath = "//*[text()='Alle Cookies inkl. US Partner akzeptieren']")
     WebElement CookingsAkzeptieren;
+
+    @FindBy(xpath = "//*[text()='Jetzt einloggen!']")
+    WebElement einLoggen;
+
+    @FindBy(xpath = "//*[text()='Einloggen']")
+    WebElement einLoggen2;
+
+    @FindBy(id = "ikea-search-input")
+    WebElement searchButton;
+
+    @FindBy(xpath = "//*[@id=\"search-box__searchbutton\"]")
+    WebElement searchButtonClick;
+
+    @FindBy(css = "[aria-label=\" In den Warenkorb, LACK, Wandregal\"]")
+    WebElement regalZuWarenkoob;
 
 
 
