@@ -23,11 +23,16 @@ public class IkeaPom extends GenelWebDriver{
        // wait.until(ExpectedConditions.elementToBeClickable(elements.einLoggen2));
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchButton)).sendKeys("regal");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.searchButtonClick));
 
-        //Assert.assertTrue(driver.getCurrentUrl().contains("search"));
-        //wait.until(ExpectedConditions.urlContains("search"));
-      //  wait.until(ExpectedConditions.urlToBe("https://www.ikea.com/de/de/search/?q=regal"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='search-results']")));
+        wait.until(ExpectedConditions.elementToBeClickable(elements.searchButtonClick));
+ 
+        //wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@class='plp-filter plp-clearfix']")));
+
+       // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='plp-filter plp-clearfix']")));
+        //wait.until(ExpectedConditions.textToBe(By.xpath("//*[text()='Ergebnisse für „regal“. 1016 Produkte und 519 Inhaltsergebnisse gefunden.']"),"Ergebnisse für „regal“. 1016 Produkte und 519 Inhaltsergebnisse gefunden."));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Ergebnisse für „regal“. 1016 Produkte und 519 Inhaltsergebnisse gefunden.']")));
+        //wait.until(ExpectedConditions.urlToBe("https://www.ikea.com/de/de/search/?q=regal"));
         //wait.until(ExpectedConditions.elementToBeClickable(elements.regalZuWarenkoob));
     }
 

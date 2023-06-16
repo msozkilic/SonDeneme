@@ -24,6 +24,9 @@ public class Elements {
     @FindBy(xpath = "//*[@id=\"search-box__searchbutton\"]")
     WebElement searchButtonClick;
 
+    @FindBy(xpath = "//*[@class='plp-filter plp-clearfix']")
+    WebElement searchList;
+
     @FindBy(css = "[aria-label=\" In den Warenkorb, LACK, Wandregal\"]")
     WebElement regalZuWarenkoob;
 
